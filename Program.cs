@@ -1,12 +1,20 @@
 ﻿namespace KoganCodingChallenge
 {
-    using System;
+    using Api;
+    using Core;
+    using Core.Interfaces;
+    using Output;
 
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static readonly OutputHandler OutputHandler = new ConsoleOutputHandler();
+        private static readonly InputHandler InputHandler = new ApiInputHandler();
+
+        public static void Main()
         {
-            Console.WriteLine("Hello world");
+            var products = InputHandler.GetProducts();
+            var averageCubicWeightOfAirConditioners = CubicWeightService.CalculateAverageCubicWeightOf(products, "Air Conditioners");
+            OutputHandler.OutputCubicWeight(averageCubicWeightOfAirConditioners);
         }
     }
 }
