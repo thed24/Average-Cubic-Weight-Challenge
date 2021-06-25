@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoganCodingChallenge", "KoganCodingChallenge.csproj", "{D0DDECF2-3575-4367-83F7-119AFC4FF13A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoganCodingChallenge", "Application\KoganCodingChallenge.csproj", "{9C95CC40-69BE-4073-B624-D6526290E2B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoganCodingChallengeTests", "Tests\KoganCodingChallengeTests\KoganCodingChallengeTests.csproj", "{56BAE4A6-FAD3-444B-842C-26F73ED0193E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D0DDECF2-3575-4367-83F7-119AFC4FF13A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0DDECF2-3575-4367-83F7-119AFC4FF13A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D0DDECF2-3575-4367-83F7-119AFC4FF13A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D0DDECF2-3575-4367-83F7-119AFC4FF13A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C95CC40-69BE-4073-B624-D6526290E2B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C95CC40-69BE-4073-B624-D6526290E2B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C95CC40-69BE-4073-B624-D6526290E2B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C95CC40-69BE-4073-B624-D6526290E2B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56BAE4A6-FAD3-444B-842C-26F73ED0193E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56BAE4A6-FAD3-444B-842C-26F73ED0193E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56BAE4A6-FAD3-444B-842C-26F73ED0193E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56BAE4A6-FAD3-444B-842C-26F73ED0193E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
