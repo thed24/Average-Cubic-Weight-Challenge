@@ -12,17 +12,17 @@ namespace KoganCodingChallenge.Api
     public class ApiInputHandler : InputHandler
     {
         private static readonly HttpClient Client = new HttpClient();
-        private readonly Uri resource = new Uri("http://wp8m3he1wt.s3-website-ap-southeast-2.amazonaws.com/api/products/");
+        private readonly Uri endpoint = new Uri("http://wp8m3he1wt.s3-website-ap-southeast-2.amazonaws.com");
 
         public List<Product> GetProducts()
         {
             var responses = new List<ProductsDto>();
-            var currentPageId = "1";
+            var currentPageId = "/api/products/1";
 
             var morePaginatedResponsesExist = true;
             while (morePaginatedResponsesExist)
             {
-                var productsEndpoint = new Uri(resource, currentPageId);
+                var productsEndpoint = new Uri(endpoint, currentPageId);
                 var productsAsJson = Client.GetStringAsync(productsEndpoint).Result;
                 responses.Add(JsonConvert.DeserializeObject<ProductsDto>(productsAsJson));
                 if (responses.Last().NextPageId is null)
