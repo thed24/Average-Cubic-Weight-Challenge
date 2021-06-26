@@ -1,4 +1,4 @@
-namespace KoganCodingChallenge.Network
+namespace KoganCodingChallenge.Api.ApiModels
 {
     using System.Collections.Generic;
     using Core.Models;

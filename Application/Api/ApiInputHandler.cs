@@ -4,15 +4,15 @@ namespace KoganCodingChallenge.Api
     using System.Collections.Generic;
     using System.Linq;
     using System.Net.Http;
+    using ApiModels;
     using Core.Interfaces;
     using Core.Models;
-    using Network;
     using Newtonsoft.Json;
 
     public class ApiInputHandler : InputHandler
     {
         private static readonly HttpClient Client = new HttpClient();
-        private readonly Uri Resource = new Uri("http://wp8m3he1wt.s3-website-ap-southeast-2.amazonaws.com/api/products/");
+        private readonly Uri resource = new Uri("http://wp8m3he1wt.s3-website-ap-southeast-2.amazonaws.com/api/products/");
 
         public List<Product> GetProducts()
         {
@@ -22,7 +22,7 @@ namespace KoganCodingChallenge.Api
             var morePaginatedResponsesExist = true;
             while (morePaginatedResponsesExist)
             {
-                var productsEndpoint = new Uri(Resource, currentId);
+                var productsEndpoint = new Uri(resource, currentId);
                 var productsAsJson = Client.GetStringAsync(productsEndpoint).Result;
                 responses.Add(JsonConvert.DeserializeObject<ProductDto>(productsAsJson));
                 if (responses.Last().Next is null)
