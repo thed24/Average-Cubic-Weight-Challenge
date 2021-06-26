@@ -16,22 +16,22 @@ namespace KoganCodingChallenge.Api
 
         public List<Product> GetProducts()
         {
-            var responses = new List<ProductDto>();
-            var currentId = "1";
+            var responses = new List<ProductsDto>();
+            var currentPageId = "1";
 
             var morePaginatedResponsesExist = true;
             while (morePaginatedResponsesExist)
             {
-                var productsEndpoint = new Uri(resource, currentId);
+                var productsEndpoint = new Uri(resource, currentPageId);
                 var productsAsJson = Client.GetStringAsync(productsEndpoint).Result;
-                responses.Add(JsonConvert.DeserializeObject<ProductDto>(productsAsJson));
+                responses.Add(JsonConvert.DeserializeObject<ProductsDto>(productsAsJson));
                 if (responses.Last().Next is null)
                     morePaginatedResponsesExist = false;
                 else
-                    currentId = responses.Last().Next;
+                    currentPageId = responses.Last().Next;
             }
 
-            var objects = responses.Select(p => p.Objects);
+            var objects = responses.Select(p => p.Products);
             return objects.SelectMany(p => p).ToList();
         }
     }
