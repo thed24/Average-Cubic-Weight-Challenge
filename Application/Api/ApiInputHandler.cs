@@ -31,8 +31,8 @@ namespace KoganCodingChallenge.Api
                     currentPageId = responses.Last().NextPageId;
             }
 
-            var objects = responses.Select(p => p.Products);
-            return objects.SelectMany(p => p).ToList();
+            var listsOfProducts = responses.Select(p => p.Products);
+            return listsOfProducts.SelectMany(p => p).ToList();
         }
     }
 }
