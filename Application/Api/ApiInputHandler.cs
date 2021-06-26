@@ -5,7 +5,7 @@ namespace KoganCodingChallenge.Api
     using System.Linq;
     using System.Net.Http;
     using Core.Interfaces;
-    using Domain;
+    using Core.Models;
     using Network;
     using Newtonsoft.Json;
 

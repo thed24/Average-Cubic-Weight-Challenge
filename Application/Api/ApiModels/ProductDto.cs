@@ -1,7 +1,7 @@
 namespace KoganCodingChallenge.Network
 {
     using System.Collections.Generic;
-    using Domain;
+    using Core.Models;
 
     public class ProductDto
     {

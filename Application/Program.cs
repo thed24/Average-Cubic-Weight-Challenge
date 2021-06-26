@@ -1,6 +1,7 @@
 ﻿namespace KoganCodingChallenge
 {
     using Api;
+    using Console;
     using Core;
     using Core.Interfaces;
     using Output;

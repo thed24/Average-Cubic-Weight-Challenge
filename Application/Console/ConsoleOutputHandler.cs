@@ -1,10 +1,11 @@
-namespace KoganCodingChallenge.Output
+namespace KoganCodingChallenge.Console
 {
     using System;
+    using Output;
 
     public class ConsoleOutputHandler : OutputHandler
     {
-        public void OutputCubicWeight(float value)
+        public void OutputCubicWeight(decimal value)
         {
             Console.WriteLine($"{value}kg");
         }

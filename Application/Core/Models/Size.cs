@@ -1,14 +1,18 @@
-namespace KoganCodingChallenge.Domain
+namespace KoganCodingChallenge.Core.Models
 {
     public class Size
     {
-        public float Width { get; set; }
-        public float Length { get; set; }
-        public float Height { get; set; }
+        public decimal Width { get; set; }
+        public decimal Length { get; set; }
+        public decimal Height { get; set; }
 
-        public float Area()
+        public decimal AreaInMeters()
         {
-            return Width * Length * Height;
+            var widthAsMetre = Width / 100;
+            var lengthAsMetre = Length / 100;
+            var heightAsMetre = Height / 100;
+
+            return widthAsMetre * lengthAsMetre * heightAsMetre;
         }
     }
 }

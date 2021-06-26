@@ -1,7 +1,7 @@
 namespace KoganCodingChallenge.Core.Interfaces
 {
     using System.Collections.Generic;
-    using Domain;
+    using Models;
 
     public interface InputHandler
     {
