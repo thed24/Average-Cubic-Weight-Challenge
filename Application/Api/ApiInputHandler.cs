@@ -25,10 +25,10 @@ namespace KoganCodingChallenge.Api
                 var productsEndpoint = new Uri(resource, currentPageId);
                 var productsAsJson = Client.GetStringAsync(productsEndpoint).Result;
                 responses.Add(JsonConvert.DeserializeObject<ProductsDto>(productsAsJson));
-                if (responses.Last().Next is null)
+                if (responses.Last().NextPageId is null)
                     morePaginatedResponsesExist = false;
                 else
-                    currentPageId = responses.Last().Next;
+                    currentPageId = responses.Last().NextPageId;
             }
 
             var objects = responses.Select(p => p.Products);
