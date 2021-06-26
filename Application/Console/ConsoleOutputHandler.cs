@@ -1,13 +1,13 @@
 namespace KoganCodingChallenge.Console
 {
     using System;
-    using Output;
+    using Core.Interfaces;
 
     public class ConsoleOutputHandler : OutputHandler
     {
-        public void OutputCubicWeight(decimal value)
+        public void OutputAverageCubicWeight(decimal value, string category)
         {
-            Console.WriteLine($"{value}kg");
+            Console.WriteLine($"Average Cubic Weight of all {category}: {value}kg");
         }
     }
 }

@@ -4,7 +4,6 @@
     using Console;
     using Core;
     using Core.Interfaces;
-    using Output;
 
     internal class Program
     {
@@ -15,7 +14,7 @@
         {
             var products = InputHandler.GetProducts();
             var averageCubicWeightOfAirConditioners = CubicWeightService.CalculateAverageCubicWeightOf(products, "Air Conditioners");
-            OutputHandler.OutputCubicWeight(averageCubicWeightOfAirConditioners);
+            OutputHandler.OutputAverageCubicWeight(averageCubicWeightOfAirConditioners, "Air Conditioners");
         }
     }
 }
