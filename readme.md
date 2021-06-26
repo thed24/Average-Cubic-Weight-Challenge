@@ -32,7 +32,7 @@ cd Application
 dotnet run
 ```
 
-Alternatively, see the releases section for an executable that will run the CLI tool.
+To obtain this repo / project, either use Git to clone the repo, or download the zipped source code from the releases section in GitHub.
 
 ## Example Payload From API:
 
