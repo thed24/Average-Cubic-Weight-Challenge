@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoganCodingChallenge", "Application\KoganCodingChallenge.csproj", "{9C95CC40-69BE-4073-B624-D6526290E2B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingChallenge", "Application\CodingChallenge.csproj", "{9C95CC40-69BE-4073-B624-D6526290E2B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoganCodingChallengeTests", "Tests\KoganCodingChallengeTests.csproj", "{F0BDF8BD-D4A6-413E-BC19-D0E4AEAE2818}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingChallengeTests", "Tests\CodingChallengeTests.csproj", "{F0BDF8BD-D4A6-413E-BC19-D0E4AEAE2818}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
