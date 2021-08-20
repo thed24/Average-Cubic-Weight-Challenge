@@ -1,9 +1,5 @@
 # Average Cubic Weight Challenge
 
-Name: Dominic Codespoti
-
-Language of choice: C#
-
 ## Challenge Description
 Using the provided (paginated) API, find the average cubic weight for all products in the "Air Conditioners" category.
 
